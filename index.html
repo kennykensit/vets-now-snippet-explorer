@@ -12,34 +12,29 @@
   --red-dark:#b50422;
   --red-light:#fce8ec;
   --red-mid:#f5b3c0;
-  --purple:#312783;
-  --purple-dark:#261e69;
-  --purple-light:#eceafa;
-  --purple-mid:#b8b2df;
   --black:#000000;
   --white:#ffffff;
-  --bg:#f7f7f8;
+  --bg:#f5f5f5;
   --surface:#ffffff;
-  --border:#e2e2e6;
-  --text:#0a0a0a;
-  --text-mid:#444455;
-  --text-muted:#888899;
+  --border:#e0e0e0;
+  --text:#000000;
+  --text-mid:#444444;
+  --text-muted:#888888;
 }
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.5}
 
-.header{background:var(--black);padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:3px solid var(--red)}
+.header{background:var(--red);padding:1.25rem 2rem;display:flex;align-items:center;gap:1rem;border-bottom:3px solid var(--red-dark)}
 .header h1{font-size:1rem;font-weight:600;color:var(--white);letter-spacing:0.01em}
-.header .meta{font-size:0.72rem;color:#888;margin-top:3px;font-family:'JetBrains Mono',monospace}
-.header .meta span{color:var(--red)}
-.vn-badge{font-size:0.65rem;font-weight:700;color:var(--red);letter-spacing:0.1em;text-transform:uppercase;border:1.5px solid var(--red);padding:4px 10px;border-radius:3px}
+.header .meta{font-size:0.72rem;color:rgba(255,255,255,0.75);margin-top:3px;font-family:'JetBrains Mono',monospace}
+.header .meta span{color:var(--white);font-weight:600}
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--border)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-bottom:1px solid var(--border)}
 .stat{background:var(--white);padding:1.1rem 1.75rem;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
 .stat .n{font-size:1.6rem;font-weight:600;color:var(--red);font-family:'JetBrains Mono',monospace;line-height:1}
 .stat .l{font-size:0.65rem;color:var(--text-muted);margin-top:5px;text-transform:uppercase;letter-spacing:0.07em}
 
-.controls{display:flex;gap:0.75rem;padding:0.875rem 2rem;border-bottom:1px solid var(--border);align-items:center;flex-wrap:wrap;background:var(--white);position:sticky;top:0;z-index:10;box-shadow:0 1px 3px rgba(0,0,0,0.07)}
+.controls{display:flex;gap:0.75rem;padding:0.875rem 2rem;border-bottom:1px solid var(--border);align-items:center;flex-wrap:wrap;background:var(--white);position:sticky;top:0;z-index:10;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
 .search-box{flex:1;min-width:200px;position:relative}
 .search-box input{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:5px;padding:0.5rem 0.75rem 0.5rem 2.1rem;font-size:0.85rem;color:var(--text);font-family:inherit;outline:none;transition:border-color 0.15s}
 .search-box input:focus{border-color:var(--red);background:var(--white)}
@@ -58,20 +53,20 @@ select.srt:focus{border-color:var(--red)}
 .results{padding:0 2rem 3rem}
 .page{border-bottom:1px solid var(--border);padding:1.25rem 0}
 .page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:0.75rem}
-.page-url{font-size:0.82rem;font-weight:500;color:var(--purple);font-family:'JetBrains Mono',monospace;flex:1;line-height:1.4;word-break:break-all}
+.page-url{font-size:0.82rem;font-weight:500;color:var(--red-dark);font-family:'JetBrains Mono',monospace;flex:1;line-height:1.4;word-break:break-all}
 .page-url em{background:#fff3cd;color:#7a5000;font-style:normal;padding:0 2px;border-radius:2px}
 .pmeta{display:flex;gap:0.5rem;align-items:center;flex-shrink:0}
 .badge{font-size:0.6rem;padding:3px 8px;border-radius:3px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em}
 .bc{background:var(--red-light);color:var(--red-dark);border:1px solid var(--red-mid)}
-.ba{background:var(--purple-light);color:var(--purple-dark);border:1px solid var(--purple-mid)}
+.ba{background:#f0f0f0;color:#333;border:1px solid #ccc}
 .pev{font-size:0.72rem;font-family:'JetBrains Mono',monospace;color:var(--text-muted)}
 .pev strong{color:var(--text-mid)}
 
 .snip-table{width:100%;border-collapse:collapse;font-size:0.78rem;border:1px solid var(--border);border-radius:5px;overflow:hidden}
-.snip-table thead tr{background:var(--purple)}
+.snip-table thead tr{background:var(--black)}
 .snip-table thead td{padding:0.45rem 0.75rem;font-size:0.65rem;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.07em;font-weight:500}
 .snip-table tbody tr:nth-child(even){background:#fafafa}
-.snip-table tbody tr:hover{background:var(--purple-light)}
+.snip-table tbody tr:hover{background:var(--red-light)}
 .snip-table tbody td{padding:0.45rem 0.75rem;color:var(--text-mid);vertical-align:top;border-bottom:1px solid var(--border);line-height:1.45}
 .snip-table tbody tr:last-child td{border-bottom:none}
 .snip-table tbody td:nth-child(3),
@@ -93,13 +88,11 @@ select.srt:focus{border-color:var(--red)}
     <h1>AI Overview &amp; Snippet Explorer</h1>
     <div class="meta">vets-now.com &mdash; <span>90 days</span> &mdash; GA4 text fragment tracking &mdash; <span>17,607</span> events &mdash; <span>393</span> pages</div>
   </div>
-  <div class="vn-badge">Vets Now</div>
 </div>
 <div class="stats">
   <div class="stat"><div class="n">17,607</div><div class="l">total events</div></div>
   <div class="stat"><div class="n">393</div><div class="l">pages cited</div></div>
   <div class="stat"><div class="n">3,844</div><div class="l">snippet variations</div></div>
-  <div class="stat"><div class="n">60</div><div class="l">clinic pages cited</div></div>
 </div>
 <div class="controls">
   <div class="search-box"><input type="text" id="q" placeholder="Search by URL path..." autocomplete="off"></div>
